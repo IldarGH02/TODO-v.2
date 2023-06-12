@@ -1,10 +1,11 @@
+import { Suspense } from "react"
+import { Routes, Route } from "react-router-dom"
+
 import Layout from "pages/Layout"
 import TodosPage, { routeMain as routeTodosPage } from "pages/TodosPage"
 import AboutPage, { routeMain as routeAboutPage } from "pages/AboutPage"
-import { Suspense } from "react"
-
-import { Routes, Route } from "react-router-dom"
 import Loader from "ui/Loader"
+import ScrollUp from "ui/ScrollUp"
 
 const AppContent = () => {
     return (
@@ -17,6 +18,7 @@ const AppContent = () => {
                     </Route>
                 </Routes>
             </Suspense>
+            <ScrollUp/>
         </div>
     )
 }
