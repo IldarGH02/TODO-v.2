@@ -1,1 +1,1 @@
-export const routeMain = () => '/todos'
+export const routeMain = () => '/'

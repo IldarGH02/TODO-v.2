@@ -4,11 +4,12 @@ import AboutPage, { routeMain as routeAboutPage } from "pages/AboutPage"
 import { Suspense } from "react"
 
 import { Routes, Route } from "react-router-dom"
+import Loader from "ui/Loader"
 
 const AppContent = () => {
     return (
         <div className="mainWrapper">
-            <Suspense fallback={''}>
+            <Suspense fallback={<Loader/>}>
                 <Routes>
                     <Route path="/" element={<Layout/>}>
                         <Route path={routeTodosPage()} element={<TodosPage/>}/>

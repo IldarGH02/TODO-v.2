@@ -1,1 +1,1 @@
-export const routeMain = () => '/'
+export const routeMain = () => '/about'
