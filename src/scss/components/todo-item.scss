@@ -1,0 +1,56 @@
+.todo__item {
+    border-bottom: 1px solid $outlineColor;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .item__content {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 15px 10px;
+
+        .item__ckeckbox {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            outline: none;
+
+            &:focus-within {
+                box-shadow: 0px 0px 3px 3px rgba(13, 110, 253, 0.2);
+            }
+        }
+
+        .item__name {
+            margin: 0;
+            @include _fontStyles(400, 20px, 25px, $textColor)
+        }
+
+        .completed {
+            text-decoration: line-through;
+        }
+
+        .item__delete {
+            padding: 10px 15px;
+            background-color: transparent;
+            border: none;
+            outline: 1px solid $warningColor;
+            transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+            &:focus-within {
+                background-color: $warningColor;
+                color: $whiteColor;
+            }
+
+            &:hover {
+                background-color: $warningColor;
+                color: $whiteColor;
+            }
+
+            @include _fontStyles(300, 15px, 20px, $textColor);
+        }
+    }
+}

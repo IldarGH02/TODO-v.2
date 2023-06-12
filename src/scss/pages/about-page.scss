@@ -1,0 +1,105 @@
+.about {
+    padding: 50px 0;
+
+    .about__content {
+        display: flex;
+        flex-flow: row wrap-reverse;
+        justify-content: space-between;
+
+        .about__card {
+            .about__information {
+                .about__name {
+                    margin-bottom: 30px;
+                    @include _fontStyles(600, 30px, 35px, $blueText)
+                }
+                
+                .about__education {
+                    @include _fontStyles(400, 20px, 30px, $blueText);
+
+                    span {
+                        @include _fontStyles(400, 20px, 23px, $blackColor);
+                    }
+                }
+
+                .about__education-institution {
+                    @include _fontStyles(400, 20px, 30px, $blueText);
+
+                    span {
+                        @include _fontStyles(400, 20px, 23px, $blackColor);
+                    }
+                }
+
+                .education__time-title {
+                    margin-bottom: 15px;
+                    @include _fontStyles(400, 20px, 25px, $blueText);
+                }
+
+                .about__education-time {                  
+
+                    .education__time {
+                        @include _fontStyles(400, 20px, 23px, $blackColor);
+                    }
+                }
+
+                .jobs__experience-title {
+                    margin-bottom: 15px;
+                    @include _fontStyles(400, 20px, 25px, $blueText);
+                }
+
+                .about__jobs {
+                    .job__information {
+                        .job__place {
+                            @include _fontStyles(400, 20px, 25px, $textColor);
+
+                            span {
+                                @include _fontStyles(400, 20px, 23px, $blackColor);
+                            }
+                        }
+
+                        .job__position {
+                            @include _fontStyles(400, 20px, 25px, $textColor);
+
+                            span {
+                                @include _fontStyles(400, 20px, 23px, $blackColor);
+                            }
+                        }
+
+                        .job__time {
+                            @include _fontStyles(400, 20px, 25px, $textColor);
+
+                            span {
+                                @include _fontStyles(400, 20px, 23px, $blackColor);
+                            }
+                        }
+                    }
+                }
+
+                .about__developer-title {
+                    margin-bottom: 15px;
+                    @include _fontStyles(400, 20px, 25px, $blueText);
+                }
+
+                .about__developer-info {
+                    .developer__stack-item {
+                        @include _fontStyles(400, 20px, 23px, $blackColor);
+                    }
+                }
+
+                .about__github {
+                    @include _fontStyles(400, 20px, 25px, $blueText);
+
+                    .github__link {
+                        text-decoration: none;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: $activeLink
+                        };
+
+                        @include _fontStyles(400, 20px, 23px, $blackColor);
+                    }
+                }
+            }
+        }
+    }
+}
